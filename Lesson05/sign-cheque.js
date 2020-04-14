@@ -14,19 +14,19 @@ let amount = '1.0';
 async function signPayment() {
     let wallet = new ethers.Wallet(privateKey);
     let amountWei = ethers.utils.parseEther(amount);
+    const nonce = ethUtil.bufferToHex(crypto.randomBytes(32));
 
     let message = ethers.utils.concat([
         ethers.utils.hexZeroPad(contractAddr, 20),
         ethers.utils.hexZeroPad(to, 20),
         ethers.utils.hexZeroPad(ethers.utils.hexlify(amountWei), 32),
+        nonce
     ]);
 
     let messageHash = ethers.utils.keccak256(message);
 
     let sig = await wallet.signMessage(ethers.utils.arrayify(messageHash));
     let splitSig = ethers.utils.splitSignature(sig);
-
-    const nonce = ethUtil.bufferToHex(crypto.randomBytes(32));
 
     console.log(`to: ${to}`);
     console.log(`amount: ${amountWei}`);

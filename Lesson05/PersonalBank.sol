@@ -23,10 +23,12 @@ contract PersonalBank {
         uint8 v
     ) public {
         bytes32 newTransaction = keccak256(abi.encodePacked(to, amount, nonce));
-        
+
         require(!transactions[newTransaction], "not a new transaction");
-        
-        bytes32 messageHash = keccak256(abi.encodePacked(address(this), to, amount));
+
+        bytes32 messageHash = keccak256(
+            abi.encodePacked(address(this), to, amount, nonce)
+        );
 
         bytes32 messageHash2 = keccak256(
             abi.encodePacked("\x19Ethereum Signed Message:\n32", messageHash)
@@ -35,7 +37,7 @@ contract PersonalBank {
         require(ecrecover(messageHash2, v, r, s) == owner, "bad signature");
 
         transactions[newTransaction] = true;
-        
+
         to.transfer(amount);
     }
 }
