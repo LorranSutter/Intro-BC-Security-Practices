@@ -1,7 +1,7 @@
 # Intro to Blockchain - Security Practices
 Labs for the course BCDV1002 - Introduction to Blockchain - Security Practices from [Blockchain Development](https://www.georgebrown.ca/programs/blockchain-development-program-t175/) program from [George Brown College](https://www.georgebrown.ca)
 
-## Course outline
+## :pencil: Course outline
 
 This course covers a set of security best practices and possible flaws in developing smart contracts.
 
@@ -25,7 +25,7 @@ This course covers a set of security best practices and possible flaws in develo
     - Input handling, on-chain/off-chain
     - Modify a smart contract and an off-chain program to make them secure preventing replay attacks and cross-contract spends.
 
-## References
+## :book: References
 - [Doug Hoyte - course website](https://hoytech.github.io/blockchain-security/)
 - [ethers.js](https://docs.ethers.io/)
 - [ethereumjs-util](https://www.npmjs.com/package/ethereumjs-util)
