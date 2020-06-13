@@ -25,10 +25,12 @@ This course covers a set of security best practices and possible flaws in develo
     - Input handling, on-chain/off-chain
     - Modify a smart contract and an off-chain program to make them secure preventing replay attacks and cross-contract spends.
 
-## :book: References and technologies :computer:
-- [Doug Hoyte - course website](https://hoytech.github.io/blockchain-security/)
-- [ethers.js](https://docs.ethers.io/)
-- [ethereumjs-util](https://www.npmjs.com/package/ethereumjs-util)
-- [Ganache-CLI](https://github.com/trufflesuite/ganache-cli)
-- [Metamask](https://metamask.io/)
-- [Remix](https://remix.ethereum.org/)
+## :computer: Technologies
+- [Ethers.js](https://docs.ethers.io/) - interact with smart contracts
+- [Ethereumjs-util](https://www.npmjs.com/package/ethereumjs-util) - utility functions for Ethereum
+- [Ganache-CLI](https://github.com/trufflesuite/ganache-cli) - blockchain emulator
+- [Metamask](https://metamask.io/) - crypto wallet
+- [Remix](https://remix.ethereum.org/) - suite of tools for smart contracts
+
+## :cookie: Credits
+- [Doug Hoyte](https://hoytech.github.io/blockchain-security/) - course website for BCDV1002
